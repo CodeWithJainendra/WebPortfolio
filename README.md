@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Jainendra Singh | Software Developer Portfolio
 
-# Run and deploy your AI Studio app
+A modern portfolio built with React (Vite) and Tailwind CSS.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1ZNVzfSx6IKjjBu3hytb5o2SSuiXst2xG
+Deploy-ready with Netlify (SPA redirects configured).
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js (v18+ recommended)
 
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the app:
    `npm run dev`
+
+## Deploy (Netlify)
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- SPA redirects: configured via `netlify.toml` and `public/_redirects`
+
+Connect the GitHub repo in Netlify (Import from Git) and deployments will trigger on push to `main`.
