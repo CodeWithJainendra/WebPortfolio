@@ -18,7 +18,16 @@ export const SKILLS_DATA: { category: string; skills: SkillItem[] }[] = [
       { name: 'Application Development', percentage: 90 },
       { name: 'Java', percentage: 85 },
       { name: 'Flutter', percentage: 80 },
+      { name: 'React', percentage: 85 },
+      { name: 'Vue', percentage: 70 },
       { name: 'Embedded Systems', percentage: 75 },
+    ]
+  },
+  {
+    category: 'Frontend Development',
+    skills: [
+      { name: 'React', percentage: 70 },
+      { name: 'Vue', percentage: 70 },
     ]
   },
   {
@@ -115,6 +124,20 @@ export const PROJECTS_DATA: ProjectItem[] = [
         description: 'A food discovery application that helps users find and review local restaurants, cafes, and eateries based on their preferences.',
         image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400&auto=format&fit=crop',
         tags: ['Food', 'Discovery', 'Mobile App', 'API Integration'],
+        githubUrl: 'https://github.com/CodeWithJainendra',
+    },
+    {
+        title: 'AIRAWAT Employee Check-in App',
+        description: 'AIRAWAT  employee attendance and check-in tracking app; real-time logs, role-based access, aur secure data storage.',
+        image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=400&auto=format&fit=crop',
+        tags: ['Attendance', 'Employee', 'Mobile App', 'React'],
+        githubUrl: 'https://github.com/CodeWithJainendra',
+    },
+    {
+        title: 'JayantsList',
+        description: 'To Connect Seller-Buyer in a marketplace platform; listings, search/filter, messaging aur secure transactions.',
+        image: 'https://images.unsplash.com/photo-1557825835-1f61c9d5290f?q=80&w=400&auto=format&fit=crop',
+        tags: ['Marketplace', 'Seller', 'Buyer', 'Web App'],
         githubUrl: 'https://github.com/CodeWithJainendra',
     },
 ];
