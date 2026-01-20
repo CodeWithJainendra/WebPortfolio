@@ -13,7 +13,7 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className="md:w-2/3 text-center md:text-left text-lg text-slate-400 space-y-4">
-          <h3 className="text-2xl font-bold text-white mb-2">Project Engineer & IoT Developer</h3>
+          <h3 className="text-2xl font-bold text-white mb-2">Software Engineer & Full Stack Developer</h3>
           <p>
             I'm a technology enthusiast with a robust background in software development and cybersecurity. My journey has been fueled by a relentless curiosity and a desire to build innovative, secure, and user-friendly solutions.
           </p>
@@ -25,14 +25,14 @@ const About: React.FC = () => {
       <div className="mt-16 text-center">
         <h3 className="text-2xl font-bold text-white mb-4">Languages</h3>
         <div className="flex justify-center gap-8 md:gap-12">
-            <div className="text-lg bg-slate-800/50 p-4 rounded-lg border border-slate-700 min-w-[120px]">
-                <p className="font-semibold text-slate-300">English</p>
-                <p className="text-slate-400 text-sm">Bilingual</p>
-            </div>
-            <div className="text-lg bg-slate-800/50 p-4 rounded-lg border border-slate-700 min-w-[120px]">
-                <p className="font-semibold text-slate-300">Hindi</p>
-                <p className="text-slate-400 text-sm">Fluent</p>
-            </div>
+          <div className="text-lg bg-slate-800/50 p-4 rounded-lg border border-slate-700 min-w-[120px]">
+            <p className="font-semibold text-slate-300">English</p>
+            <p className="text-slate-400 text-sm">Bilingual</p>
+          </div>
+          <div className="text-lg bg-slate-800/50 p-4 rounded-lg border border-slate-700 min-w-[120px]">
+            <p className="font-semibold text-slate-300">Hindi</p>
+            <p className="text-slate-400 text-sm">Fluent</p>
+          </div>
         </div>
       </div>
     </SectionWrapper>

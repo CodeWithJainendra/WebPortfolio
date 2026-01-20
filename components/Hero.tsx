@@ -6,7 +6,7 @@ import { SOCIAL_LINKS } from '../constants';
 const profileImageUrl = new URL('../shivam image.png', import.meta.url).href;
 const resumePdfUrl = new URL('../Jainendra Resume.pdf', import.meta.url).href;
 
-const ROLES = ['Project Engineer.', 'IoT Developer.', 'Cybersecurity Enthusiast.'];
+const ROLES = ['Software Engineer.', 'Full Stack Developer.', 'IoT Developer.', 'Cybersecurity Enthusiast.'];
 const TYPING_SPEED = 100;
 const DELETING_SPEED = 50;
 const DELAY = 2000;
@@ -25,13 +25,13 @@ const Hero: React.FC = () => {
       const handleType = () => {
         const i = loopNum % ROLES.length;
         const fullText = ROLES[i];
-    
+
         setText(
           isDeleting
             ? fullText.substring(0, text.length - 1)
             : fullText.substring(0, text.length + 1)
         );
-    
+
         if (!isDeleting && text === fullText) {
           setTimeout(() => setIsDeleting(true), DELAY);
         } else if (isDeleting && text === '') {
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
             I am a <span className="text-indigo-400 border-r-4 border-indigo-400 animate-pulse">{text}</span>
           </p>
           <p className="text-slate-400 max-w-xl mx-auto md:mx-0 mb-8">
-            Dynamic Project Engineer at IIT Kanpur, specializing in IoT and application development. Proven ability to design and implement innovative solutions, optimizing project timelines and resource allocation. Skilled in cybersecurity and database management, with a strong focus on enhancing user experience through advanced technologies.
+            Dynamic Software Engineer & Full Stack Developer at IIT Kanpur, specializing in IoT and application development. Proven ability to design and implement innovative solutions, optimizing project timelines and resource allocation. Skilled in cybersecurity and database management, with a strong focus on enhancing user experience through advanced technologies.
           </p>
           <div className="flex justify-center md:justify-start items-center space-x-4 mb-8">
             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-transform duration-300 transform hover:scale-110">
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
               <LinkedinIcon className="w-8 h-8" />
             </a>
           </div>
-          <a 
+          <a
             href={resumePdfUrl}
             download
             className="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/30"
@@ -76,14 +76,14 @@ const Hero: React.FC = () => {
           </a>
         </div>
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full blur-2xl opacity-50"></div>
-                 <img 
-                    src={profileImageUrl} 
-                    alt="Jainendra Singh"
-                    className="relative rounded-full w-full h-full object-cover border-4 border-indigo-500/50 shadow-xl" 
-                />
-            </div>
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full blur-2xl opacity-50"></div>
+            <img
+              src={profileImageUrl}
+              alt="Jainendra Singh"
+              className="relative rounded-full w-full h-full object-cover border-4 border-indigo-500/50 shadow-xl"
+            />
+          </div>
         </div>
       </div>
     </section>

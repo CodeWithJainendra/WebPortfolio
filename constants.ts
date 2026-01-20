@@ -1,51 +1,51 @@
 import { ProjectItem, SkillItem, ExperienceItem, CertificationItem } from './types';
 
 export const NAV_LINKS = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Certifications', href: '#certifications' },
-  { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Certifications', href: '#certifications' },
+    { name: 'Contact', href: '#contact' },
 ];
 
 export const SKILLS_DATA: { category: string; skills: SkillItem[] }[] = [
-  {
-    category: 'Core Development',
-    skills: [
-      { name: 'IoT Development', percentage: 95 },
-      { name: 'Application Development', percentage: 90 },
-      { name: 'Java', percentage: 85 },
-      { name: 'Flutter', percentage: 80 },
-      { name: 'React', percentage: 85 },
-      { name: 'Vue', percentage: 70 },
-      { name: 'Embedded Systems', percentage: 75 },
-    ]
-  },
-  {
-    category: 'Frontend Development',
-    skills: [
-      { name: 'React', percentage: 70 },
-      { name: 'Vue', percentage: 70 },
-    ]
-  },
-  {
-    category: 'Specializations',
-    skills: [
-        { name: 'Cybersecurity', percentage: 90 },
-        { name: 'AI & Machine Learning', percentage: 70 },
-        { name: 'AR/VR Development', percentage: 65 },
-    ]
-  },
-  {
-    category: 'Infrastructure',
-    skills: [
-      { name: 'Server Development', percentage: 80 },
-      { name: 'Database Management', percentage: 85 },
-      { name: 'Cloud Server Management', percentage: 75 },
-    ]
-  }
+    {
+        category: 'Core Development',
+        skills: [
+            { name: 'IoT Development', percentage: 95 },
+            { name: 'Application Development', percentage: 90 },
+            { name: 'Java', percentage: 85 },
+            { name: 'Flutter', percentage: 80 },
+            { name: 'React', percentage: 85 },
+            { name: 'Vue', percentage: 70 },
+            { name: 'Embedded Systems', percentage: 75 },
+        ]
+    },
+    {
+        category: 'Frontend Development',
+        skills: [
+            { name: 'React', percentage: 70 },
+            { name: 'Vue', percentage: 70 },
+        ]
+    },
+    {
+        category: 'Specializations',
+        skills: [
+            { name: 'Cybersecurity', percentage: 90 },
+            { name: 'AI & Machine Learning', percentage: 70 },
+            { name: 'AR/VR Development', percentage: 65 },
+        ]
+    },
+    {
+        category: 'Infrastructure',
+        skills: [
+            { name: 'Server Development', percentage: 80 },
+            { name: 'Database Management', percentage: 85 },
+            { name: 'Cloud Server Management', percentage: 75 },
+        ]
+    }
 ];
 
 export const PROJECTS_DATA: ProjectItem[] = [
@@ -146,13 +146,13 @@ export const PROJECTS_DATA: ProjectItem[] = [
 export const EXPERIENCE_DATA: ExperienceItem[] = [
     {
         date: 'Oct 2024 - Present',
-        title: 'Project Engineer',
+        title: 'Software Engineer',
         institution: 'IIT Kanpur, Kanpur, Uttar Pradesh',
         description: 'Designing and implementing innovative IoT and application solutions. Responsibilities include monitoring project progress, developing detailed work plans, managing server infrastructure, and ensuring application performance and security.',
     },
     {
         date: 'Oct 2024 - Present',
-        title: 'Volunteer Project Engineer',
+        title: 'Volunteer Software Engineer',
         institution: 'IIT Kanpur, Kanpur, Uttar Pradesh',
         description: 'Monitored and tracked project progress to support completion on time and within budget. Facilitated quality control inspections and collaborated with team members to define scope, timeline, and deliverables.',
     },
@@ -180,7 +180,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
         institution: 'Wendy High School',
         description: '',
     },
-     {
+    {
         date: 'Completed Jul 2016',
         title: 'High School in Science',
         institution: 'Kendriya Vidyalaya IIT, Kanpur',
