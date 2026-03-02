@@ -140,6 +140,27 @@ export const PROJECTS_DATA: ProjectItem[] = [
         tags: ['Marketplace', 'Seller', 'Buyer', 'Web App'],
         githubUrl: 'https://github.com/CodeWithJainendra',
     },
+    {
+        title: 'Government Dhanvantari',
+        description: 'A comprehensive healthcare platform providing patient, doctor, and CHO consultation services, streamlining medical care across various government facilities.',
+        image: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=400&auto=format&fit=crop',
+        tags: ['Government', 'Healthcare', 'Web App', 'Native App'],
+        githubUrl: 'https://github.com/CodeWithJainendra',
+    },
+    {
+        title: 'FocusBet',
+        description: 'A productivity-focused application designed to help users maintain focus and achieve their goals through incentivized betting on personal milestones.',
+        image: 'https://images.unsplash.com/photo-1512428559083-a400a4b82c31?q=80&w=400&auto=format&fit=crop',
+        tags: ['Productivity', 'Incentive', 'Web App', 'Gamification'],
+        githubUrl: 'https://github.com/CodeWithJainendra',
+    },
+    {
+        title: 'Aayu',
+        description: 'A comprehensive health and wellness platform that provides personalized healthcare solutions, telehealth services, and wellness tracking.',
+        image: 'https://images.unsplash.com/photo-1505751172876-01923c5810ee?q=80&w=400&auto=format&fit=crop',
+        tags: ['Health', 'Wellness', 'Telemedicine', 'Mobile App'],
+        githubUrl: 'https://github.com/CodeWithJainendra',
+    },
 ];
 
 
