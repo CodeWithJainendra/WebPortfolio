@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalFixer — Hyperlocal Services & Digital Health Marketplace</title>
+    <meta name="description" content="LocalFixer is a hyperlocal services marketplace connecting users with verified local professionals — home services and a Digital Health vertical with ABHA-based, consent-driven health records (ABDM).">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0f172a; --bg2: #1e293b; --card: #1e293b; --line: #334155;
+            --text: #e2e8f0; --muted: #94a3b8; --brand: #14b8a6; --brand2: #6366f1;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        a { color: var(--brand); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+        header.nav { position: sticky; top: 0; z-index: 50; background: rgba(15,23,42,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+        header.nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+        .logo { font-size: 22px; font-weight: 800; color: #fff; }
+        .logo span { color: var(--brand); }
+        header.nav nav a { color: var(--muted); margin-left: 22px; font-weight: 500; }
+        header.nav nav a:hover { color: var(--brand); text-decoration: none; }
+        @media (max-width: 640px){ header.nav nav { display:none; } }
+
+        .hero { padding: 80px 0 60px; background: radial-gradient(1200px 400px at 50% -50%, rgba(99,102,241,0.25), transparent), var(--bg); text-align: center; }
+        .badge { display:inline-block; background: rgba(20,184,166,0.12); color: var(--brand); border:1px solid rgba(20,184,166,0.4); padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600; margin-bottom:20px; }
+        .hero h1 { font-size: 44px; line-height: 1.15; color:#fff; margin-bottom: 18px; }
+        .hero h1 span { background: linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .hero p { font-size: 19px; color: var(--muted); max-width: 720px; margin: 0 auto 28px; }
+        .cta a { display:inline-block; background: var(--brand); color:#04201c; font-weight:700; padding:13px 26px; border-radius:10px; margin:6px; }
+        .cta a.secondary { background: transparent; color: var(--text); border:1px solid var(--line); }
+        @media (max-width:640px){ .hero h1{ font-size:32px; } }
+
+        section { padding: 64px 0; border-top: 1px solid var(--line); }
+        .eyebrow { color: var(--brand); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:13px; }
+        h2 { font-size: 32px; color:#fff; margin: 8px 0 16px; }
+        .lead { color: var(--muted); max-width: 760px; font-size: 17px; margin-bottom: 36px; }
+
+        .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 20px; }
+        .card { background: var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; }
+        .card:hover { border-color: var(--brand); }
+        .card .ico { font-size: 30px; margin-bottom: 12px; }
+        .card h3 { color:#fff; font-size: 19px; margin-bottom: 8px; }
+        .card p { color: var(--muted); font-size: 15px; }
+        .card .price { margin-top:12px; color: var(--brand); font-weight:700; }
+
+        .steps { counter-reset: step; display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+        .step { background: var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; position:relative; }
+        .step::before { counter-increment: step; content: counter(step); display:flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:var(--brand2); color:#fff; font-weight:700; margin-bottom:12px; }
+        .step h4 { color:#fff; margin-bottom:6px; font-size:16px; }
+        .step p { color: var(--muted); font-size:14px; }
+
+        .health { background: linear-gradient(180deg, rgba(20,184,166,0.06), transparent); }
+        ul.ticks { list-style:none; margin-top:10px; }
+        ul.ticks li { padding-left: 28px; position:relative; margin-bottom:10px; color: var(--text); }
+        ul.ticks li::before { content:"✓"; position:absolute; left:0; color: var(--brand); font-weight:800; }
+
+        .privacy-note { background: var(--card); border:1px solid var(--line); border-left:4px solid var(--brand); border-radius:10px; padding:22px; }
+
+        .contact-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+        .contact-grid .card p { color: var(--text); }
+
+        footer { border-top:1px solid var(--line); padding: 36px 0; color: var(--muted); font-size:14px; }
+        footer .links a { color: var(--muted); margin-right:18px; }
+        footer .biz { margin: 14px 0; }
+        footer .biz strong { color: var(--text); }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <div class="wrap">
+            <div class="logo">Local<span>Fixer</span></div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#health">Digital Health</a>
+                <a href="#abdm">ABHA / ABDM</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="wrap">
+            <span class="badge">Hyperlocal Services + Digital Health</span>
+            <h1>Find verified local professionals.<br><span>Now with Digital Health.</span></h1>
+            <p>LocalFixer is a hyperlocal services marketplace that connects users with verified local professionals — from home services to a new Digital Health vertical where users can manage their health records securely using ABHA (Ayushman Bharat Health Account).</p>
+            <div class="cta">
+                <a href="#health">Explore Digital Health</a>
+                <a href="#contact" class="secondary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT / WHAT IT IS -->
+    <section id="about">
+        <div class="wrap">
+            <p class="eyebrow">About LocalFixer</p>
+            <h2>One app to find trusted local help</h2>
+            <p class="lead">LocalFixer connects everyday users with nearby, identity-verified service providers. Users post a request, get matched with available local professionals, track the job in real time, and pay for the service — all within the app. Every provider is verified before they can offer services on the platform.</p>
+            <div class="grid">
+                <div class="card"><div class="ico">📍</div><h3>Hyperlocal Matching</h3><p>Users are matched with available, nearby professionals based on location and service category.</p></div>
+                <div class="card"><div class="ico">🛡️</div><h3>Identity-Verified Providers</h3><p>Service providers complete identity verification (including Aadhaar-based KYC) before listing services.</p></div>
+                <div class="card"><div class="ico">⭐</div><h3>Ratings & Reviews</h3><p>Transparent reviews and ratings help users choose the right professional with confidence.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES + PRICING -->
+    <section id="services">
+        <div class="wrap">
+            <p class="eyebrow">Services & Pricing</p>
+            <h2>Home & local services</h2>
+            <p class="lead">Book verified professionals for everyday needs. Prices below are indicative starting visit charges in Indian Rupees (INR); final pricing depends on the job and is shown in-app before you confirm.</p>
+            <div class="grid">
+                <div class="card"><div class="ico">🔧</div><h3>Plumber</h3><p>Leak repairs, fittings, installations and general plumbing work.</p><div class="price">₹199 onwards</div></div>
+                <div class="card"><div class="ico">💡</div><h3>Electrician</h3><p>Wiring, repairs, appliance installation and electrical safety checks.</p><div class="price">₹199 onwards</div></div>
+                <div class="card"><div class="ico">🪚</div><h3>Carpenter</h3><p>Furniture repair, fittings, woodwork and custom installations.</p><div class="price">₹249 onwards</div></div>
+                <div class="card"><div class="ico">🔩</div><h3>Mechanic</h3><p>On-demand two-wheeler and appliance mechanical assistance.</p><div class="price">₹249 onwards</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIGITAL HEALTH VERTICAL -->
+    <section id="health" class="health">
+        <div class="wrap">
+            <p class="eyebrow">Digital Health Vertical</p>
+            <h2>Verified health professionals + your ABHA health records</h2>
+            <p class="lead">LocalFixer is expanding into Digital Health. Verified doctors and health professionals (nurses, physiotherapists, home-care providers) can offer teleconsultation and home-care services on the platform. To make care continuous and paperless, users can link their <strong>ABHA (Ayushman Bharat Health Account)</strong> and share their health records with a chosen provider — only with explicit, revocable consent.</p>
+            <div class="grid">
+                <div class="card"><div class="ico">🩺</div><h3>Health Professionals</h3><p>Verified doctors, nurses, physiotherapists and home-care providers list consultation and home-care services.</p></div>
+                <div class="card"><div class="ico">🆔</div><h3>ABHA Linking</h3><p>Users create or link their ABHA number/address inside the app to build a portable, lifelong health identity.</p></div>
+                <div class="card"><div class="ico">📄</div><h3>Consent-Based Records</h3><p>Health records are fetched and shared only after the user grants explicit, time-bound consent — and can be revoked anytime.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABDM / ABHA USAGE -->
+    <section id="abdm">
+        <div class="wrap">
+            <p class="eyebrow">How we use ABHA / ABDM</p>
+            <h2>ABDM integration scope</h2>
+            <p class="lead">LocalFixer's Digital Health vertical integrates with the Ayushman Bharat Digital Mission (ABDM) building blocks to enable secure, consent-driven exchange of health information. We are applying for ABDM Sandbox access to build and validate the following flows end-to-end:</p>
+            <ul class="ticks">
+                <li><strong>ABHA Creation &amp; Verification</strong> — let users create a new ABHA or link and verify an existing ABHA number/address within the app.</li>
+                <li><strong>Personal Health Records (PHR)</strong> — allow users to view and manage their longitudinal health records in the app as a Health Information User (HIU).</li>
+                <li><strong>Consent-based Health Record Linking (HIP / HIU)</strong> — raise consent requests and, on user approval, fetch and share encrypted health records with the selected verified provider.</li>
+            </ul>
+            <div class="steps" style="margin-top:30px;">
+                <div class="step"><h4>Create / Link ABHA</h4><p>User creates or links and verifies their ABHA in the app.</p></div>
+                <div class="step"><h4>Request Consent</h4><p>App raises a time-bound consent request for specific record types.</p></div>
+                <div class="step"><h4>User Approves</h4><p>User explicitly approves on their ABHA/consent manager.</p></div>
+                <div class="step"><h4>Secure Exchange</h4><p>Records are exchanged encrypted, used only for the consented purpose, and consent can be revoked anytime.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section id="privacy">
+        <div class="wrap">
+            <p class="eyebrow">Privacy & Data Protection</p>
+            <h2>Your health data, your control</h2>
+            <div class="privacy-note">
+                <ul class="ticks">
+                    <li>We do <strong>not</strong> store your full Aadhaar number — only verified status and masked details (last 4 digits) where required.</li>
+                    <li>Health records are <strong>encrypted</strong> in transit and at rest, and are accessed strictly on a <strong>consent-driven</strong> basis.</li>
+                    <li>Consent is <strong>explicit, time-bound, purpose-limited and revocable</strong> by the user at any time.</li>
+                    <li>We follow the principle of <strong>data minimisation</strong> and the ABDM Health Data Management Policy.</li>
+                </ul>
+                <p style="margin-top:14px;">Read our full <a href="privacy.html">LocalFixer Health Data Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="wrap">
+            <p class="eyebrow">Contact</p>
+            <h2>Get in touch</h2>
+            <p class="lead">LocalFixer is owned and operated by <strong>ORVIL STUDIOS</strong>. For any queries, partnerships or grievances, reach us at:</p>
+            <div class="contact-grid">
+                <div class="card"><h3>Email</h3><p><a href="mailto:shivamraaj1@gmail.com">shivamraaj1@gmail.com</a></p></div>
+                <div class="card"><h3>Phone</h3><p>+91 9675789818</p></div>
+                <div class="card"><h3>Registered Address</h3><p>ORVIL STUDIOS<br>House No 1066, Type 1, IIT Kanpur,<br>Kanpur, Uttar Pradesh – 208016, India</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms &amp; Conditions</a>
+                <a href="/refund.html">Refund Policy</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="biz">
+                <strong>ORVIL STUDIOS</strong> — Product: <strong>LocalFixer</strong><br>
+                House No 1066, Type 1, IIT Kanpur, Uttar Pradesh – 208016, India
+            </div>
+            <p>&copy; <span id="yr"></span> ORVIL STUDIOS. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
