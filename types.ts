@@ -23,3 +23,9 @@ export interface CertificationItem {
   name: string;
   date: string;
 }
+
+export interface ServiceItem {
+  name: string;
+  description: string;
+  price: string;
+}

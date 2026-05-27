@@ -1,6 +1,14 @@
 import React from 'react';
-import { SOCIAL_LINKS } from '../constants';
+import { SOCIAL_LINKS, BUSINESS_INFO } from '../constants';
 import { GithubIcon, LinkedinIcon, MailIcon } from './icons/Icons';
+
+const POLICY_LINKS = [
+  { name: 'Terms & Conditions', href: '/terms.html' },
+  { name: 'Privacy Policy', href: '/privacy.html' },
+  { name: 'Refund Policy', href: '/refund.html' },
+  { name: 'Return Policy', href: '/return.html' },
+  { name: 'Shipping Policy', href: '/shipping.html' },
+];
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -22,7 +30,28 @@ const Footer: React.FC = () => {
                 <span className="sr-only">Email</span>
             </a>
         </div>
-        <p>&copy; {currentYear} Jainendra Singh. All Rights Reserved.</p>
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
+          {POLICY_LINKS.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-slate-400 hover:text-indigo-400 transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </nav>
+        <div className="text-sm text-slate-400 mb-4 space-y-1">
+          <p className="font-semibold text-slate-300">{BUSINESS_INFO.name}</p>
+          <p>{BUSINESS_INFO.address}</p>
+          <p>
+            {BUSINESS_INFO.email} &nbsp;|&nbsp; {BUSINESS_INFO.phone}
+          </p>
+        </div>
+        <p>
+          &copy; {currentYear} {BUSINESS_INFO.name}. All Rights Reserved. &middot; Founded by{' '}
+          {BUSINESS_INFO.founder}.
+        </p>
       </div>
     </footer>
   );

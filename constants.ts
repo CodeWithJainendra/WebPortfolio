@@ -1,13 +1,55 @@
-import { ProjectItem, SkillItem, ExperienceItem, CertificationItem } from './types';
+import { ProjectItem, SkillItem, ExperienceItem, CertificationItem, ServiceItem } from './types';
 
 export const NAV_LINKS = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Services', href: '#services' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
+];
+
+export const BUSINESS_INFO = {
+    name: 'ORVIL STUDIOS',
+    founder: 'Jainendra Singh',
+    address: 'House No 1066, Type 1, IIT Kanpur, Uttar Pradesh, India',
+    email: 'shivamraaj1@gmail.com',
+    phone: '+91 9675789818',
+};
+
+export const SERVICES_DATA: ServiceItem[] = [
+    {
+        name: 'Android App Development',
+        description: 'Native Android applications built with Java/Kotlin & Flutter, from concept to Play Store launch.',
+        price: '₹25,000 onwards',
+    },
+    {
+        name: 'iOS App Development',
+        description: 'Native iOS applications designed for performance and a seamless user experience.',
+        price: '₹30,000 onwards',
+    },
+    {
+        name: 'Website & Web App Development',
+        description: 'Responsive websites and web applications using React, Vue and modern web stacks.',
+        price: '₹15,000 onwards',
+    },
+    {
+        name: 'IoT Solution Development',
+        description: 'End-to-end IoT solutions including embedded systems, sensors and cloud dashboards.',
+        price: '₹40,000 onwards',
+    },
+    {
+        name: 'UI/UX Design',
+        description: 'Clean, intuitive interface and experience design for web and mobile products.',
+        price: '₹10,000 onwards',
+    },
+    {
+        name: 'Maintenance & Support',
+        description: 'Ongoing updates, bug fixes and technical support for your application or website.',
+        price: '₹5,000 / month',
+    },
 ];
 
 export const SKILLS_DATA: { category: string; skills: SkillItem[] }[] = [
