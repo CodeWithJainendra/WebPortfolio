@@ -48,13 +48,19 @@ const Header: React.FC = () => {
           ))}
         </div>
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-slate-300 hover:text-indigo-400 focus:outline-none">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-slate-300 hover:text-indigo-400 focus:outline-none"
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+          >
             {isOpen ? <XIcon /> : <MenuIcon />}
           </button>
         </div>
       </nav>
       {/* Mobile Menu */}
-      <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} overflow-hidden bg-slate-800`}>
+      <div id="mobile-menu" className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} overflow-hidden bg-slate-800`}>
         <div className="flex flex-col items-center py-4">
           {NAV_LINKS.map((link) => (
             <a 
