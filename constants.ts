@@ -16,7 +16,6 @@ export const BUSINESS_INFO = {
     founder: 'Jainendra Singh',
     address: 'House No 1066, Type 1, IIT Kanpur, Uttar Pradesh, India',
     email: 'shivamraaj1@gmail.com',
-    phone: '+91 9675789818',
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
