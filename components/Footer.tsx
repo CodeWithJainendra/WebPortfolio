@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           <p className="font-semibold text-slate-300">{BUSINESS_INFO.name}</p>
           <p>{BUSINESS_INFO.address}</p>
           <p>
-            {BUSINESS_INFO.email} &nbsp;|&nbsp; {BUSINESS_INFO.phone}
+            {BUSINESS_INFO.email}
           </p>
         </div>
         <p>
